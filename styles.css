@@ -1,1 +1,41 @@
 /*  your css code here. If applicable */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+}
+
+.panel {
+    flex: 0.5;
+    margin: 10px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    opacity: 0;
+}
+
+.panel.active .img-text {
+    opacity: 1;
+}
